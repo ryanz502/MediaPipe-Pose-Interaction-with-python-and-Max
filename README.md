@@ -2,9 +2,12 @@
 
 This project is an interactive body-tracking system developed using Python, MediaPipe, and Max/MSP. It is designed for live performance, with real-time mapping calibration and backup MIDI control in case of tracking failure.
 
+
 ## 1. System Overview
 
 The system consists of a Python script and a Max/MSP patch.
+
+The Python script also calculates the three-dimensional velocity and acceleration of both wrists based on their positional changes over time. These data are transmitted separately from the landmark coordinates via OSC.
 
 The Python script must be launched before the Max patch. It uses **MediaPipe Pose** to track six body landmarks:
 
